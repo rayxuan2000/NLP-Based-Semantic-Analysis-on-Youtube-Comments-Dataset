@@ -10,4 +10,4 @@ The dataset is too hugh to upload to the repo. You can download [here](https://d
 - Used a dataset of user comment for youtube videos related to pets (data size around 6M+) to parse out and analyzed text via Spark.
 - Bulit a machine learning pipeline, labeled each comments after data cleaning by extracting key tokens (containing regex-Tokenizer module and key words setting) and imported Word2Vec module to word embeddings.
 - Trained classifier models for the cat and dog owners with the best model (AUC score = 0.94).
-- Extracted important topics (topic modeling ) among cat and dog owners based on word frequency and identified creators with cat and dog owners in the audience for potential recommendation.
+- Extracted important topics (topic modeling) among cat and dog owners based on word frequency and identified creators with cat and dog owners in the audience for potential recommendation.
