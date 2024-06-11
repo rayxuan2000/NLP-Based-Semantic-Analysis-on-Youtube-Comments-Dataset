@@ -6,6 +6,9 @@ In this notebook, I have a dataset of user comments for youtube videos related t
 ## Data and Code
 The dataset is too hugh to upload to the repo. You can download [here](https://drive.google.com/file/d/1o3DsS3jN_t2Mw3TsV0i7ySRmh9kyYi1a/view). The code is from [here](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1772353219017266/3842882422099798/105392983207357/latest.html).
 
+## Some notes
+- The embedding matrix/weight matrix for the embedding layer is truly what we want because it gives us embedding representation for each vocabulary, no matter what the output is(it gives context information, that's all).
+
 ## Summary
 - Used a dataset of user comment for youtube videos related to pets (data size around 6M+) to parse out and analyzed text via Spark.
 - Bulit a machine learning pipeline, labeled each comments after data cleaning by extracting key tokens (containing regex-Tokenizer module and key words setting) and imported Word2Vec module to word embeddings.
