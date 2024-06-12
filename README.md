@@ -8,7 +8,8 @@ The dataset is too hugh to upload to the repo. You can download [here](https://d
 
 ## Some notes
 - The embedding matrix/weight matrix for the embedding layer is truly what we want because it gives us embedding representation for each vocabulary, no matter what the output is(it gives context information, that's all).
-
+- Some potential points to write on resume: resampling, topic modeling, cross validation...
+  
 ## Summary
 - Used a dataset of user comment for youtube videos related to pets (data size around 6M+) to parse out and analyzed text via Spark.
 - Bulit a machine learning pipeline, labeled each comments after data cleaning by extracting key tokens (containing regex-Tokenizer module and key words setting) and imported Word2Vec module to word embeddings.
