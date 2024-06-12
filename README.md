@@ -8,6 +8,7 @@ The dataset is too hugh to upload to the repo. You can download [here](https://d
 
 ## Notes
 - The embedding matrix/weight matrix for the embedding layer is truly what we want because it gives us embedding representation for each vocabulary, no matter what the output is(it gives context information, that's all).
+- Be aware how to define an embedding for a given review (just a little more upon word embedding).
   
 ## Summary
 - Used a dataset of user comment for youtube videos related to pets (data size around 6M+) to parse out and analyzed text via Spark.
