@@ -9,7 +9,18 @@ The dataset is too hugh to upload to the repo. You can download [here](https://d
 ## Notes
 - The embedding matrix/weight matrix for the embedding layer is truly what we want because it gives us embedding representation for each vocabulary, no matter what the output is(it gives context information, that's all).
 - Be aware how to define an embedding for a given review (just a little more upon word embedding). Here token are just each word. What Word2Vec does is to map each word to a unique fixed-size vector and then transform each document into a vector using the average of all words in the document.
+- About skip-gram, we pass in a word and try to predict the words surrounding it in the text.
 - In skip-gram, I create two dictionaries to convert words to integers and back again (integers to words). This is a little bit similar baby-gpt project.
+- Subsampling in skip-gram is for removing some of the noise. The higher a word may appear, the higher it will be removed.
+- Batches and window: example
+
+```
+Say, we have an input and we're interested in the idx=2 token, 741:
+[5233, 58, 741, 10571, 27349, 0, 15067, 58112, 3580, 58, 10712]
+For R=2, get_target should return a list of four values:
+[5233, 58, 10571, 27349]
+```
+
 - In the prediction part, I want to know if a model can tell whether a people is cat or dog owner. Before that, I manually label the data with keywords technique.
 - For topic modeling, I extract the five most related topic that an owner might be interested in. For video creator recommendation, I pick the 3 videos (with authors) with the most reviews.
 - For LDA, basically, each document is made up of various words, and each topic also has various words belonging to it. Sort the words with respect to their weight score, the top x words are chosen from each topic to represent the topic.
