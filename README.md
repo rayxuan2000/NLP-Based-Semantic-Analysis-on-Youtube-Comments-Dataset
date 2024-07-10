@@ -8,8 +8,10 @@ The dataset is too hugh to upload to the repo. You can download [here](https://d
 
 ## Notes
 - The embedding matrix/weight matrix for the embedding layer is truly what we want because it gives us embedding representation for each vocabulary, no matter what the output is(it gives context information, that's all).
-- Be aware how to define an embedding for a given review (just a little more upon word embedding).
+- Be aware how to define an embedding for a given review (just a little more upon word embedding). Here token are just each word. What Word2Vec does is to map each word to a unique fixed-size vector and then transform each document into a vector using the average of all words in the document.
 - In skip-gram, I create two dictionaries to convert words to integers and back again (integers to words). This is a little bit similar baby-gpt project.
+- In the prediction part, I want to know if a model can tell whether a people is cat or dog owner. Before that, I manually label the data with keywords technique.
+- For topic modeling, I extract the five most related topic that an owner might be interested in. For video creator recommendation, I pick the 3 videos (with authors) with the most reviews.
   
 ## Summary
 - Used a dataset of user comment for youtube videos related to pets (data size around 6M+) to parse out and analyzed text via Spark.
