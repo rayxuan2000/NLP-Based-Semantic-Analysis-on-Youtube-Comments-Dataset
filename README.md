@@ -7,7 +7,7 @@ In this notebook, I have a dataset of user comments for youtube videos related t
 The dataset is too hugh to upload to the repo. You can download [here](https://drive.google.com/file/d/1o3DsS3jN_t2Mw3TsV0i7ySRmh9kyYi1a/view). The spark code is from [here](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1772353219017266/3842882422099798/105392983207357/latest.html). The skip-gram jupyter notebook on my test data has been uploaded to the folder.
 
 ## Notes
-- The embedding matrix/weight matrix for the embedding layer is truly what we want because it gives us embedding representation for each vocabulary, no matter what the output is(it gives context information, that's all).
+- The embedding matrix/weight matrix for the embedding layer is truly what we want because it gives us embedding representation for each vocabulary (on each row), no matter what the output is (it just gives predicted output, that's all).
 - Be aware how to define an embedding for a given review (just a little more upon word embedding). Here token are just each word. What Word2Vec does is to map each word to a unique fixed-size vector and then transform each document into a vector using the average of all words in the document.
 - About skip-gram, we pass in a word and try to predict the words surrounding it in the text.
 - In skip-gram, I create two dictionaries to convert words to integers and back again (integers to words). This is a little bit similar baby-gpt project.
