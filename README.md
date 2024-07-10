@@ -20,7 +20,9 @@ Say, we have an input and we're interested in the idx=2 token, 741:
 For R=2, get_target should return a list of four values:
 [5233, 58, 10571, 27349]
 ```
+When generating batch, the idea is that it grabs batch_size words from a words list. Then for each of those batches, it gets the target words in a window.
 
+- I use T-SNE to visualize word vectors.
 - In the prediction part, I want to know if a model can tell whether a people is cat or dog owner. Before that, I manually label the data with keywords technique.
 - For topic modeling, I extract the five most related topic that an owner might be interested in. For video creator recommendation, I pick the 3 videos (with authors) with the most reviews.
 - For LDA, basically, each document is made up of various words, and each topic also has various words belonging to it. Sort the words with respect to their weight score, the top x words are chosen from each topic to represent the topic.
