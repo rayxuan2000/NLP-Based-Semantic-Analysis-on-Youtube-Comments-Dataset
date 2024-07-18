@@ -20,7 +20,7 @@ Say, we have an input and we're interested in the idx=2 token, 741:
 For R=2, get_target should return a list of four values:
 [5233, 58, 10571, 27349]
 ```
-When generating batch, the idea is that it grabs batch_size words from a words list. Then for each of those batches, it gets the target words in a window. Inputs are like [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3] if batch_size = 4 and targets are like [1, 2, 3, 0, 2, 3, 0, 1, 3, 0, 1, 2].
+When generating batch, the idea is that it grabs batch_size words from a words list. Then for each of those batches, it gets the target words in a window. Inputs are like [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3] if batch_size (not number of batches) = 4 and targets are like [1, 2, 3, 0, 2, 3, 0, 1, 3, 0, 1, 2].
 
 - I use T-SNE to visualize word vectors.
 - In the prediction part, I want to know if a model can tell whether a people is cat or dog owner. Before that, I manually label the data with keywords matching technique. And the input to the machine learning model is just the document embedding.
