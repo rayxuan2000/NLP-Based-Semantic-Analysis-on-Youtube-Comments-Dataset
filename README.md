@@ -23,7 +23,7 @@ For R=2, get_target should return a list of four values:
 When generating batch, the idea is that it grabs batch_size words from a words list. Then for each of those batches, it gets the target words in a window. Inputs are like [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3] if batch_size = 4 and targets are like [1, 2, 3, 0, 2, 3, 0, 1, 3, 0, 1, 2].
 
 - I use T-SNE to visualize word vectors.
-- In the prediction part, I want to know if a model can tell whether a people is cat or dog owner. Before that, I manually label the data with keywords matching technique.
+- In the prediction part, I want to know if a model can tell whether a people is cat or dog owner. Before that, I manually label the data with keywords matching technique. And the input to the machine learning model is just the document embedding.
 - For topic modeling, I extract the five most related topic that an owner might be interested in. For video creator recommendation, I pick the 3 videos (with authors) with the most reviews.
 - For LDA, basically, each document is made up of various words, and each topic also has various words belonging to it. Sort the words with respect to their weight score, the top x words are chosen from each topic to represent the topic.
   
